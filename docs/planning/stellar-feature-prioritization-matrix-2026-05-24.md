@@ -97,6 +97,12 @@ Computer progression policy note:
 
 1. [SW-13 External Object Presentation Expansion Implementation Plan](sw-13/sw-13-external-object-presentation-implementation-plan.md)
 
+SW-13 execution order (Orion coordination baseline):
+1. Forge-first: lock descriptor contract, enums, and validation semantics.
+2. Nova-next: implement renderer and readability behavior against locked descriptors.
+3. Forge then Nova integration pass: wire real payload production, then complete frontend cutover.
+4. Joint hardening: contract, component, route-smoke, and performance fallback verification before merge.
+
 ## Active Top-5 Net-New Features (Post SW-01 Closure)
 
 1. SW-16 Ship-External Target Persistence on Re-Entry (4.30)

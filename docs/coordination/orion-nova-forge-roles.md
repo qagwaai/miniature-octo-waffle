@@ -33,3 +33,8 @@ This document defines the working boundary for the Stellar coordination model.
 - ship-external-view remains a frequent frontend hotspot.
 - stellar-viewer remains a frequent frontend hotspot.
 - Contract drift across Nova and Forge should be documented immediately, not deferred.
+
+## Feature Coordination Runbooks
+
+- SW-13 handoff and gate runbook: [docs/coordination/sw-13-orion-coordination-runbook.md](sw-13-orion-coordination-runbook.md)
+- SW-17 handoff and gate runbook: [docs/coordination/sw-17-orion-coordination-runbook.md](sw-17-orion-coordination-runbook.md)

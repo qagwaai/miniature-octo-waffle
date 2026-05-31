@@ -27,6 +27,11 @@ As of 2026-05-30, Orion's current view of Stellar is:
 - ship-external-view and stellar-viewer should keep getting periodic decomposition review.
 - Any contract mismatch should be treated as a source-of-truth violation rather than patched over with fallback behavior.
 
+## Current Cross-Repo Implementation Order Policy
+
+- For descriptor-first features such as SW-13: Forge locks contract first, Nova builds and integrates second, then both run shared hardening before release decisions.
+- No feature moves to release when contract and rendering semantics drift, even if one side appears locally stable.
+
 ## Active Near-Term Feature Shape
 
 - SW-02 Market Opportunity Pings.
