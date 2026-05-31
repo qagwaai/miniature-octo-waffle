@@ -11,9 +11,9 @@ Define explicit Orion coordination handoff gates for SW-13 milestones M0-M6 so F
 
 ## Current Milestone Status (2026-05-30)
 
-- M0: Forge-confirmed complete; pending Nova adapter sign-off evidence and Orion gate close record.
-- M1: Forge-confirmed complete; pending Nova rendering evidence and Orion gate close record.
-- M2: Not started; blocked on M1 Nova and Orion closeout.
+- M0: Forge-confirmed complete; Nova reports completion; pending Orion evidence review and gate close record.
+- M1: Forge-confirmed complete; Nova M1 started; pending Nova rendering evidence and Orion gate close record.
+- M2: Forge-confirmed complete; Orion decision lock set, pending Nova evidence pass and Orion gate close.
 
 ## Implementation Order
 
@@ -53,6 +53,10 @@ Orion gate check:
 Exit evidence:
 - Contract fixture pass and mismatch fixture hard-fail logs attached to milestone note.
 
+Current status note:
+- Nova reports M0 deliverables complete.
+- Orion gate remains open until Nova evidence is reviewed and accepted.
+
 M0 Step 1 decision lock (for Step 2 fixture generation):
 1. Fallback tier naming remains exactly: hero, standard, minimal.
 2. Gate family values for this schema version remain exactly: ring-gate, segmented-arch, relay-spindle.
@@ -81,6 +85,7 @@ Exit evidence:
 
 Current status note:
 - Forge reports M1 deliverables complete.
+- Nova reports M1 work started.
 - Orion gate remains open until Nova evidence is attached and reviewed.
 
 ### M2 - Ship and Station Family Pass
@@ -99,6 +104,18 @@ Orion gate check:
 
 Exit evidence:
 - Route-smoke evidence and recognition threshold report.
+
+M2 decision lock (for Nova evidence pass):
+1. Nova recognition checks should use all 9 M2 descriptors from external-object-descriptor-m2-ships-stations.json as the canonical baseline.
+2. Route-smoke scenarios may use focused subsets, but sign-off evidence must include full-9 coverage results.
+3. fallbackTier is data plus behavior for M2 evidence: Nova must assert expected fallback behavior for hero, standard, and minimal tiers.
+4. Component-level OpenAPI contract surfacing is sufficient for M2 handoff; no additional dedicated retrieval surface is required in this milestone.
+5. Current faction mappings for frigate, interceptor, and naval-outpost are accepted for Nova readability baseline.
+6. Publish a formal faction matrix before M3 as a forward guardrail, not as an M2 blocker.
+
+Current status note:
+- Forge reports M2 deliverables complete.
+- Orion gate remains open until Nova route-smoke and recognition evidence is attached and reviewed.
 
 ### M3 - Jump Gate Landmark Pass
 
