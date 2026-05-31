@@ -9,6 +9,12 @@ Primary plan: ../planning/sw-13/sw-13-external-object-presentation-implementatio
 
 Define explicit Orion coordination handoff gates for SW-13 milestones M0-M6 so Forge and Nova execution order stays stable and drift is blocked before release.
 
+## Current Milestone Status (2026-05-30)
+
+- M0: Forge-confirmed complete; pending Nova adapter sign-off evidence and Orion gate close record.
+- M1: Forge-confirmed complete; pending Nova rendering evidence and Orion gate close record.
+- M2: Not started; blocked on M1 Nova and Orion closeout.
+
 ## Implementation Order
 
 1. Forge-first contract lock.
@@ -47,6 +53,15 @@ Orion gate check:
 Exit evidence:
 - Contract fixture pass and mismatch fixture hard-fail logs attached to milestone note.
 
+M0 Step 1 decision lock (for Step 2 fixture generation):
+1. Fallback tier naming remains exactly: hero, standard, minimal.
+2. Gate family values for this schema version remain exactly: ring-gate, segmented-arch, relay-spindle.
+3. Do not add a reserved gate family value in sw-13-m0-v1; expansion requires a later schema version.
+4. Faction cue unknown is permitted for unattributed objects, including canary fixtures.
+5. Step 2 mismatch fixtures must hard-fail any schemaVersion other than sw-13-m0-v1.
+6. displayLabel is mandatory for production descriptors and canonical pass fixtures.
+7. displayLabel may be omitted only in intentional negative mismatch fixtures.
+
 ### M1 - Debris and Asteroid Identity Pass
 
 Entry criteria:
@@ -63,6 +78,10 @@ Orion gate check:
 
 Exit evidence:
 - Component snapshots and selector test output.
+
+Current status note:
+- Forge reports M1 deliverables complete.
+- Orion gate remains open until Nova evidence is attached and reviewed.
 
 ### M2 - Ship and Station Family Pass
 
@@ -155,6 +174,8 @@ Exit evidence:
 2. Any contract drift blocks release until source-of-truth is corrected.
 3. Legacy presentation fallbacks are not reintroduced.
 4. All M0-M6 gates require written evidence.
+5. Forge `openapi.yaml` remains the single contract source for Forge-to-Nova implementation details.
+6. M0 and later handoffs must reference concrete OpenAPI schema sections used by Nova.
 
 ## Sign-Off Table
 

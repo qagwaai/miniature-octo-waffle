@@ -27,6 +27,8 @@ This document defines the working boundary for the Stellar coordination model.
 - Put the source of truth closest to the system that actually controls the behavior.
 - Prefer source fixes over compensating fallbacks.
 - Record validation paths for anything that touches contracts, state transitions, or gameplay-critical loops.
+- Forge `openapi.yaml` is the single contract source of truth for Forge-to-Nova coordination.
+- Contract updates in `openapi.yaml` must be detailed enough for Nova implementation without guesswork.
 
 ## Shared Architectural Watchpoints
 
@@ -38,3 +40,7 @@ This document defines the working boundary for the Stellar coordination model.
 
 - SW-13 handoff and gate runbook: [docs/coordination/sw-13-orion-coordination-runbook.md](sw-13-orion-coordination-runbook.md)
 - SW-17 handoff and gate runbook: [docs/coordination/sw-17-orion-coordination-runbook.md](sw-17-orion-coordination-runbook.md)
+
+## Contract Authority
+
+- Forge OpenAPI policy: [docs/coordination/forge-openapi-contract-policy.md](forge-openapi-contract-policy.md)

@@ -32,6 +32,12 @@ As of 2026-05-30, Orion's current view of Stellar is:
 - For descriptor-first features such as SW-13: Forge locks contract first, Nova builds and integrates second, then both run shared hardening before release decisions.
 - No feature moves to release when contract and rendering semantics drift, even if one side appears locally stable.
 
+## SW-13 Coordination Status
+
+- Forge has confirmed SW-13 M0 and M1 implementation deliverables.
+- Orion is waiting on Nova-side M0 and M1 evidence to formally close both gates.
+- SW-13 M2 start remains gated on that closeout.
+
 ## Active Near-Term Feature Shape
 
 - SW-02 Market Opportunity Pings.

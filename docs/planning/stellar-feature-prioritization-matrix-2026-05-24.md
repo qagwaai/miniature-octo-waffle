@@ -97,6 +97,10 @@ Computer progression policy note:
 
 1. [SW-13 External Object Presentation Expansion Implementation Plan](sw-13/sw-13-external-object-presentation-implementation-plan.md)
 
+SW-13 progress update (2026-05-30):
+- Forge confirmed M0 and M1 implementation deliverables.
+- Gate closure for M0 and M1 remains pending Orion review of Nova evidence.
+
 SW-13 execution order (Orion coordination baseline):
 1. Forge-first: lock descriptor contract, enums, and validation semantics.
 2. Nova-next: implement renderer and readability behavior against locked descriptors.
