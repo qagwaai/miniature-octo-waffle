@@ -12,7 +12,7 @@ Define explicit Orion coordination handoff gates for SW-13 milestones M0-M6 so F
 ## Current Milestone Status (2026-05-30)
 
 - M0: Forge-confirmed complete; Nova reports completion; pending Orion evidence review and gate close record.
-- M1: Forge-confirmed complete; Nova M1 started; pending Nova rendering evidence and Orion gate close record.
+- M1: Forge-confirmed complete; Nova reports completion; pending Orion evidence review and gate close record.
 - M2: Forge-confirmed complete; Orion decision lock set, pending Nova evidence pass and Orion gate close.
 
 ## Implementation Order
@@ -85,7 +85,7 @@ Exit evidence:
 
 Current status note:
 - Forge reports M1 deliverables complete.
-- Nova reports M1 work started.
+- Nova reports M1 deliverables complete.
 - Orion gate remains open until Nova evidence is attached and reviewed.
 
 ### M2 - Ship and Station Family Pass
@@ -106,7 +106,7 @@ Exit evidence:
 - Route-smoke evidence and recognition threshold report.
 
 M2 decision lock (for Nova evidence pass):
-1. Nova recognition checks should use all 9 M2 descriptors from external-object-descriptor-m2-ships-stations.json as the canonical baseline.
+1. Nova recognition checks should use all 9 M2 descriptors from Forge fixture [test/fixtures/sw13/external-object-descriptor-m2-ships-stations.json](https://github.com/qagwaai/solid-train/blob/main/test/fixtures/sw13/external-object-descriptor-m2-ships-stations.json) as the canonical baseline.
 2. Route-smoke scenarios may use focused subsets, but sign-off evidence must include full-9 coverage results.
 3. fallbackTier is data plus behavior for M2 evidence: Nova must assert expected fallback behavior for hero, standard, and minimal tiers.
 4. Component-level OpenAPI contract surfacing is sufficient for M2 handoff; no additional dedicated retrieval surface is required in this milestone.
@@ -133,6 +133,19 @@ Orion gate check:
 
 Exit evidence:
 - Ambiguity regression test output and gate approach flow checks.
+
+M3 decision lock (for Nova evidence pass):
+1. Nova M3 ambiguity tests should require all three gate families in every route-smoke run.
+2. Aggregate suite coverage alone is not sufficient for M3 sign-off; each route-smoke run must exercise ring-gate, segmented-arch, and relay-spindle.
+3. hazardCue medium must be treated as a mandatory warning escalation in M3 evidence criteria.
+4. Orion will lock numeric tolerance guidance before Nova finalizes assertion thresholds.
+5. recommendedStandOffKm and approachWindowKm min/max checks should use Orion-published numeric tolerances, not ad hoc per-test values.
+6. A required mapping matrix from approachCue to landmarkFraming combinations is not required for M3 if enum validation and fixture alignment are already complete.
+7. Current enum validation plus fixture alignment is sufficient for this milestone.
+
+Current status note:
+- Forge reports M3 deliverables complete.
+- Orion gate remains open until Nova route-smoke and ambiguity evidence is attached and reviewed.
 
 ### M4 - Balanced Performance Validation
 

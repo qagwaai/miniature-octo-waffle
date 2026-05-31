@@ -99,7 +99,7 @@ Computer progression policy note:
 
 SW-13 progress update (2026-05-30):
 - Forge confirmed M0, M1, and M2 implementation deliverables.
-- Nova reports M0 complete and M1 started.
+- Nova reports M0 and M1 complete.
 - Gate closure for M0, M1, and M2 remains pending Orion review of Nova evidence.
 
 SW-13 execution order (Orion coordination baseline):
