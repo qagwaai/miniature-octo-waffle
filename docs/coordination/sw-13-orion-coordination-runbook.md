@@ -1,7 +1,7 @@
 # SW-13 Orion Coordination Runbook
 
-Status: Active
-Date: 2026-05-30
+Status: Closed (Stellar Viewer only)
+Date: 2026-05-31
 Feature: SW-13 External Object Presentation Expansion
 Primary plan: ../planning/sw-13/sw-13-external-object-presentation-implementation-plan.md
 
@@ -9,11 +9,27 @@ Primary plan: ../planning/sw-13/sw-13-external-object-presentation-implementatio
 
 Define explicit Orion coordination handoff gates for SW-13 milestones M0-M6 so Forge and Nova execution order stays stable and drift is blocked before release.
 
-## Current Milestone Status (2026-05-30)
+## Closure Decision (2026-05-31)
 
-- M0: Forge-confirmed complete; Nova reports completion; pending Orion evidence review and gate close record.
-- M1: Forge-confirmed complete; Nova reports completion; pending Orion evidence review and gate close record.
-- M2: Forge-confirmed complete; Orion decision lock set, pending Nova evidence pass and Orion gate close.
+1. SW-13 is closed for Stellar Viewer rendering plus contract objectives only.
+2. ship-external-view support is explicitly deferred to SW-13A.
+3. High-poly support for Stellar Viewer and ship-external-view is explicitly deferred to SW-13B.
+4. Any dual-surface or high-poly language below is historical context for the prior plan shape and is not a blocker for SW-13 closure.
+
+## Current Milestone Status (2026-05-31)
+
+- M0: Closed for SW-13 Stellar Viewer-only scope.
+- M1: Closed for SW-13 Stellar Viewer-only scope.
+- M2: Closed for SW-13 Stellar Viewer-only scope.
+- M3: Closed for SW-13 Stellar Viewer-only scope.
+- M4: Closed for SW-13 Stellar Viewer-only scope.
+- M5: Closed for SW-13 Stellar Viewer-only scope.
+- M6: Closed; release decision accepted for SW-13 Stellar Viewer-only scope.
+
+## Follow-On Features
+
+1. SW-13A: ship-external-view support for the SW-13 descriptor-driven presentation model.
+2. SW-13B: high-poly support for Stellar Viewer and ship-external-view.
 
 ## Implementation Order
 
@@ -30,6 +46,20 @@ Define explicit Orion coordination handoff gates for SW-13 milestones M0-M6 so F
 | Descriptor rendering behavior | Accountable | Consulted | Responsible |
 | Performance fallback policy | Accountable | Consulted | Responsible |
 | Drift gates and release readiness | Accountable | Responsible | Responsible |
+
+## Surface Coverage Contract (Nova)
+
+1. SW-13 implementation scope is dual-surface by default: `ship-external-view` and `stellar-viewer`.
+2. A milestone touching object readability, landmark recognition, or fallback behavior must include evidence from both surfaces unless Orion issues an explicit written waiver.
+3. Orion does not close SW-13 milestone gates on single-surface evidence.
+4. Any temporary single-surface execution sequence must be labeled partial and include a dated completion commitment for the second surface.
+
+## Asset Fidelity Dependency Contract (Nova)
+
+1. SW-13 Nova implementation assumes high-poly hero assets are available for affected families (debris, ships, stations, gates, asteroids).
+2. If a required high-poly hero asset is missing, Nova may use an Orion-approved temporary proxy only when the proxy mapping and replacement date are recorded in milestone evidence.
+3. Orion does not close M1-M5 gates when high-poly readiness or approved proxy evidence is missing.
+4. Proxy usage is temporary by policy and must include an owner and dated replacement commitment.
 
 ## Handoff Gates (M0-M6)
 
@@ -82,6 +112,7 @@ Orion gate check:
 
 Exit evidence:
 - Component snapshots and selector test output.
+- High-poly asset readiness note (or approved proxy mapping with replacement date) for debris and asteroid families.
 
 Current status note:
 - Forge reports M1 deliverables complete.
@@ -97,13 +128,14 @@ Forge deliverables:
 - Ship and station descriptor families with stable role/faction identity fields.
 
 Nova deliverables:
-- Ship and station rendering pass with recognition-distance checks.
+- Ship and station rendering pass with recognition-distance checks in ship-external-view and stellar-viewer.
 
 Orion gate check:
-- Confirms ship-external readability acceptance criteria and hotspot boundaries remain intact.
+- Confirms ship-external-view and stellar-viewer readability acceptance criteria and hotspot boundaries remain intact.
 
 Exit evidence:
-- Route-smoke evidence and recognition threshold report.
+- Dual-surface route-smoke evidence and recognition threshold report.
+- High-poly asset readiness note (or approved proxy mapping with replacement date) for ship and station families.
 
 M2 decision lock (for Nova evidence pass):
 1. Nova recognition checks should use all 9 M2 descriptors from Forge fixture [test/fixtures/sw13/external-object-descriptor-m2-ships-stations.json](https://github.com/qagwaai/solid-train/blob/main/test/fixtures/sw13/external-object-descriptor-m2-ships-stations.json) as the canonical baseline.
@@ -126,13 +158,14 @@ Forge deliverables:
 - Gate descriptor cues and approach metadata finalized.
 
 Nova deliverables:
-- Gate landmark treatment integrated into navigation-facing flows.
+- Gate landmark treatment integrated into navigation-facing flows in ship-external-view and stellar-viewer.
 
 Orion gate check:
-- Confirms gate identity ambiguity tests fail as expected on weak-cue fixtures.
+- Confirms dual-surface gate identity ambiguity tests fail as expected on weak-cue fixtures.
 
 Exit evidence:
-- Ambiguity regression test output and gate approach flow checks.
+- Dual-surface ambiguity regression output and gate approach flow checks.
+- High-poly asset readiness note (or approved proxy mapping with replacement date) for gate landmark families.
 
 M3 decision lock (for Nova evidence pass):
 1. Nova M3 ambiguity tests should require all three gate families in every route-smoke run.
@@ -156,13 +189,26 @@ Forge deliverables:
 - Descriptor size and payload consistency review.
 
 Nova deliverables:
-- Fallback policy implementation and dense-scene performance checks.
+- Fallback policy implementation and dense-scene performance checks in ship-external-view and stellar-viewer.
 
 Orion gate check:
 - Confirms fallback behavior is deterministic and does not collapse identity semantics.
 
 Exit evidence:
-- Performance profile run output and deterministic fallback assertions.
+- Dual-surface performance profile output and deterministic fallback assertions.
+- Asset-fidelity fallback note confirming identity preservation under tier reductions.
+
+M4 decision lock (for Nova evidence pass):
+1. Nova should consume the M4 size budget from the stable fixture report and also enforce runtime guardrails against the same max envelope values.
+2. The M4 envelope values are authoritative for both fixture and runtime checks: 16 descriptor entries and 3 gate entries.
+3. Nova dense-scene tests should use hard numerical thresholds tied to the committed M4 report, not relative regression checks alone.
+4. Current max descriptor bytes in the M4 report, including gate descriptor max 328, should be enforced as explicit thresholds in Nova evidence.
+5. Artifact-to-fixture parity checks against [sw13-m4-size-consistency-report.json](https://github.com/qagwaai/solid-train/blob/main/test/fixtures/sw13/sw13-m4-size-consistency-report.json) are required for M4 sign-off.
+6. The report is authoritative evidence, not merely informative context.
+
+Current status note:
+- Forge reports M4 deliverables complete.
+- Orion gate remains open until Nova dense-scene, runtime-guardrail, and parity evidence is attached and reviewed.
 
 ### M5 - Canary Validation
 
@@ -173,13 +219,14 @@ Forge deliverables:
 - Canary environment payload stability confirmation.
 
 Nova deliverables:
-- Canary visual telemetry instrumentation and issue intake wiring.
+- Canary visual telemetry instrumentation and issue intake wiring for ship-external-view and stellar-viewer.
 
 Orion gate check:
 - Confirms no unresolved P1/P2 issues remain after soak window.
 
 Exit evidence:
-- Canary checklist, telemetry summary, issue triage log.
+- Dual-surface canary checklist, telemetry summary, issue triage log.
+- High-poly/proxy burn-down note with open replacement dates and owners.
 
 ### M6 - Release Decision
 
@@ -206,6 +253,8 @@ Exit evidence:
 4. All M0-M6 gates require written evidence.
 5. Forge `openapi.yaml` remains the single contract source for Forge-to-Nova implementation details.
 6. M0 and later handoffs must reference concrete OpenAPI schema sections used by Nova.
+7. SW-13A is the authoritative feature for ship-external-view enablement scope that was deferred from SW-13.
+8. SW-13B is the authoritative feature for high-poly readiness across Stellar Viewer and ship-external-view.
 
 ## Sign-Off Table
 

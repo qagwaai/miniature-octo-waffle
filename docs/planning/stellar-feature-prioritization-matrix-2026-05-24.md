@@ -41,7 +41,9 @@ Interpretation:
 | SW-10 | Technology Progress Tree Viewer v0 | H1/H2 bridge | 4 | 3 | 2 | 3 | 5 | 4.00 | Makes item progression and gating legible to players |
 | SW-11 | Skill Gating Scaffold (Mining First) | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Adds first activity-driven skill gate for higher-tier mining tools |
 | SW-12 | Minimal Ship-to-Ship Encounter v0 | H1/H2 bridge | 4 | 3 | 3 | 3 | 5 | 3.85 | Enables piracy, cargo theft, and sacrificial drone interactions without full combat depth |
-| SW-13 | External Object Presentation Expansion | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Improves debris, ship, gate, and station readability in ship-external view |
+| ~~SW-13~~ | External Object Presentation Expansion | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Closed 2026-05-31 as Stellar Viewer-only rendering and contract pass. |
+| SW-13A | Ship-External-View Support for External Object Presentation | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Follow-on from SW-13 to deliver ship-external-view support. |
+| SW-13B | High-Poly Support for External Object Presentation | H1/H2 bridge | 4 | 4 | 3 | 4 | 5 | 3.60 | Follow-on from SW-13 for high-poly support across Stellar Viewer and ship-external-view. |
 | SW-14 | In-System Short-Hop Drive | H1/H2 bridge | 5 | 3 | 3 | 4 | 5 | 4.00 | Makes in-system travel practical without removing fuel and route pressure |
 | SW-15 | Minimal Character Bust Builder v0 | H1/H2 bridge | 4 | 4 | 3 | 4 | 5 | 3.60 | Browser-friendly bust customization for player identity and NPC reuse |
 | SW-16 | Ship-External Target Persistence on Re-Entry | H1 | 4 | 2 | 2 | 2 | 5 | 4.30 | Preserve current target when re-entering ship-external-view if target remains valid |
@@ -70,8 +72,9 @@ Revised canonical ranking (descending by score):
 17. SW-12 Minimal Ship-to-Ship Encounter v0 (3.85)
 18. SW-09 NPC Presence v0 (Belt Pirate Runtime) (3.75)
 19. SW-11 Skill Gating Scaffold (Mining First) (3.75)
-20. SW-13 External Object Presentation Expansion (3.75)
+20. SW-13A Ship-External-View Support for External Object Presentation (3.75)
 21. SW-15 Minimal Character Bust Builder v0 (3.60)
+22. SW-13B High-Poly Support for External Object Presentation (3.60)
 
 Tie-break rule used for equal scores: prefer lower risk and fewer dependencies for H1.
 
@@ -96,11 +99,13 @@ Computer progression policy note:
 ## SW-13 Planning Artifacts (2026-05-30)
 
 1. [SW-13 External Object Presentation Expansion Implementation Plan](sw-13/sw-13-external-object-presentation-implementation-plan.md)
+2. [SW-13A Ship-External-View Support Implementation Plan](sw-13a/sw-13a-ship-external-view-support-implementation-plan.md)
+3. [SW-13B High-Poly Support Implementation Plan](sw-13b/sw-13b-high-poly-support-implementation-plan.md)
 
-SW-13 progress update (2026-05-30):
-- Forge confirmed M0, M1, and M2 implementation deliverables.
-- Nova reports M0 and M1 complete.
-- Gate closure for M0, M1, and M2 remains pending Orion review of Nova evidence.
+SW-13 closure update (2026-05-31):
+- SW-13 is closed as Stellar Viewer-only rendering and contract scope.
+- ship-external-view support has been split into SW-13A.
+- High-poly support across Stellar Viewer and ship-external-view has been split into SW-13B.
 
 SW-13 execution order (Orion coordination baseline):
 1. Forge-first: lock descriptor contract, enums, and validation semantics.

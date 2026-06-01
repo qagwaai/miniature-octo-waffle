@@ -34,10 +34,9 @@ As of 2026-05-30, Orion's current view of Stellar is:
 
 ## SW-13 Coordination Status
 
-- Forge has confirmed SW-13 M0, M1, and M2 implementation deliverables.
-- Nova reports SW-13 M0 and M1 complete.
-- Orion is waiting on Nova-side M0, M1, and M2 evidence to formally close those gates.
-- SW-13 M3 start remains gated on M2 Nova evidence closeout.
+- SW-13 is closed as a Stellar Viewer-only rendering and contract pass.
+- Deferred follow-on scope is split into SW-13A (ship-external-view support).
+- Deferred high-poly fidelity scope is split into SW-13B (Stellar Viewer and ship-external-view).
 
 ## Active Near-Term Feature Shape
 

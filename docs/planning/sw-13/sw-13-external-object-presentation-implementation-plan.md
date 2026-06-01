@@ -1,33 +1,44 @@
 # SW-13 External Object Presentation Expansion Implementation Plan (Nova + Forge)
 
-Status: Draft (Execution Ready)
-Date: 2026-05-30
+Status: Closed (Stellar Viewer only)
+Date: 2026-05-31
 Repo: laughing-octo-journey (Nova)
 Related repo: solid-train (Forge)
 Feature ID: SW-13
 Priority Score Reference: 3.75 (Current score retained)
 
+## Closure Addendum (2026-05-31)
+
+1. SW-13 is closed for Stellar Viewer rendering plus contract outcomes only.
+2. ship-external-view support is deferred to SW-13A.
+3. High-poly support for Stellar Viewer and ship-external-view is deferred to SW-13B.
+4. Dual-surface and high-poly requirements in this document are preserved as historical planning context and are superseded for SW-13 closure.
+
 ## 1. Objective
 
-Deliver a visually richer and more legible ship-external experience by expanding object identity for debris, ships, jump gates, stations, and asteroids.
+Deliver a visually richer and more legible Stellar Viewer experience by expanding object identity for debris, ships, jump gates, stations, and asteroids.
 
 This slice is visual-readability first, balanced-performance, data-driven, and full-cutover with no legacy presentation support.
 
 ## 2. Planning Inputs (Captured via Intake)
 
 1. In-scope surfaces:
+- ship-external-view
+- stellar-viewer
+2. In-scope visual domains:
 - Debris mesh identity
 - Ship silhouette families
 - Jump gate landmark treatment
 - Station landmark treatment
 - Asteroid style spectrum from rocky irregular forms to cinematic hero-style variants
-2. Performance target: balanced (visual richness with strict fallback strategy).
-3. Pipeline approach: data-driven descriptors.
-4. Priority placement: keep current score and ranking.
-5. Constraints:
+3. Performance target: balanced (visual richness with strict fallback strategy).
+4. Pipeline approach: data-driven descriptors.
+5. Priority placement: keep current score and ranking.
+6. Constraints:
 - No full 3D asset overhaul in SW-13.
 - Keep scene architecture close to current shape.
 - No legacy support paths; full cutover only.
+- High-poly hero assets are required for Nova hero-tier presentation across SW-13 families; when an asset is not available, Orion-approved temporary proxies must be documented with replacement dates.
 
 ## 3. Scope
 
@@ -83,14 +94,21 @@ Out of scope (defer):
 - Remove legacy descriptor mapping paths.
 
 2. Nova external-object rendering integration
-- Wire descriptor-driven visual selection in ship-external surfaces.
+- Wire descriptor-driven visual selection in ship-external-view and stellar-viewer.
 - Add distance-aware readability cues (silhouette emphasis, label hooks where needed).
 - Keep scene decomposition impact narrow and testable.
+
+5. Dual-surface evidence and gate-readiness tracking
+- Require milestone evidence for ship-external-view and stellar-viewer.
+- Mark milestone evidence as partial when only one surface is covered.
+- Do not call milestone ready for Orion gate close until both surfaces are evidenced.
 
 3. Asset and variant curation (within constrained budget)
 - Curate minimal but expressive variant sets for debris, ships, gates, stations, and asteroids.
 - Establish asteroid distribution policy (rocky baseline, cinematic accents).
 - Avoid full asset overhaul; focus on highest-value visual families.
+- Deliver a high-poly dependency matrix for hero-tier assets used by ship-external-view and stellar-viewer, including ownership and readiness status.
+- For any missing high-poly hero asset, attach an Orion-approved proxy mapping and dated replacement commitment before milestone sign-off.
 
 4. Performance and fallback validation
 - Define balanced-profile quality tiers.
@@ -162,32 +180,35 @@ M1: Debris and asteroid identity pass
 - Deliverables:
 1. Debris family differentiation active.
 2. Asteroid rocky-to-cinematic variant spectrum active.
+3. High-poly asteroid hero variants (or Orion-approved proxies) available for both ship-external-view and stellar-viewer evidence scenes.
 - Verification:
 1. Visual snapshot tests pass for key families.
 2. Over-spherical asteroid regression fixture fails.
 
 M2: Ship and station family pass
 - Deliverables:
-1. Ship silhouette families integrated.
-2. Station landmark readability integrated.
+1. Ship silhouette families integrated in ship-external-view and stellar-viewer.
+2. Station landmark readability integrated in ship-external-view and stellar-viewer.
+3. High-poly ship and station hero assets (or Orion-approved proxies) available for M2 dual-surface evidence scenes.
 - Verification:
-1. Route-level scene smoke tests pass.
+1. Dual-surface route-level scene smoke tests pass.
 2. Recognition-distance checks meet threshold.
 
 M3: Jump gate landmark pass
 - Deliverables:
-1. Gate visual treatment integrated with unmistakable cues.
+1. Gate visual treatment integrated with unmistakable cues in ship-external-view and stellar-viewer.
 2. Navigation readability behavior verified.
+3. High-poly gate landmark assets (or Orion-approved proxies) available for M3 dual-surface evidence scenes.
 - Verification:
-1. Gate approach/selection flow tests pass.
-2. Ambiguity regression tests fail on weak-cue fixtures.
+1. Dual-surface gate approach/selection flow tests pass.
+2. Dual-surface ambiguity regression tests fail on weak-cue fixtures.
 
 M4: Balanced-performance validation
 - Deliverables:
-1. Quality/fallback tiers validated in dense scenes.
+1. Quality/fallback tiers validated in dense scenes for ship-external-view and stellar-viewer.
 2. No major identity loss under fallback.
 - Verification:
-1. Performance profile checks pass at agreed target.
+1. Dual-surface performance profile checks pass at agreed target.
 2. Deterministic fallback tests pass.
 
 M5: Canary visual validation
@@ -214,10 +235,13 @@ M6: Release decision
 2. Risk: object identity remains ambiguous at distance.
 - Mitigation: silhouette-first design rules and recognition-distance validation.
 
-3. Risk: scope drifts into architecture rewrite.
+3. Risk: missing high-poly hero assets block Nova implementation quality or cause late milestone churn.
+- Mitigation: maintain an Orion-reviewed high-poly dependency matrix, define proxy mappings early, and block gate closure when replacement dates are missing.
+
+4. Risk: scope drifts into architecture rewrite.
 - Mitigation: strict boundary on localized integrations and explicit no-rewrite guardrail.
 
-4. Risk: coupling regressions reduce long-term maintainability.
+5. Risk: coupling regressions reduce long-term maintainability.
 - Mitigation: enforce adapter boundaries, pure selector modules, and code-review checks for separation of concerns.
 
 ## 9. Exit Criteria
@@ -227,6 +251,8 @@ M6: Release decision
 3. Asteroid fields show intentional rocky-to-cinematic variation, not spherical monotony.
 4. Balanced-performance targets hold with deterministic fallback behavior.
 5. Full cutover complete with no legacy presentation fallback path.
+6. Orion evidence package confirms ship-external-view and stellar-viewer coverage for each closed milestone.
+7. Orion evidence package includes high-poly asset readiness or approved proxy mappings with dated replacement commitments for all affected SW-13 families.
 
 ## 10. Orion Coordination and Handoff Gates
 
