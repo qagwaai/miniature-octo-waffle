@@ -30,6 +30,7 @@ Define explicit Orion coordination handoff gates for SW-13 milestones M0-M6 so F
 
 1. SW-13A: ship-external-view support for the SW-13 descriptor-driven presentation model.
 2. SW-13B: high-poly support for Stellar Viewer and ship-external-view.
+3. SW-13C: ship-external contract-backed entity feeds for gates, stations, and encounter ships.
 
 ## Implementation Order
 

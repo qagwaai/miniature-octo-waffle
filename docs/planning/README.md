@@ -12,6 +12,7 @@ This folder stores dated planning snapshots, feature rankings, and working notes
 - [SW-13 External Object Presentation Expansion Implementation Plan](sw-13/sw-13-external-object-presentation-implementation-plan.md)
 - [SW-13A Ship-External-View Support Implementation Plan](sw-13a/sw-13a-ship-external-view-support-implementation-plan.md)
 - [SW-13B High-Poly Support Implementation Plan](sw-13b/sw-13b-high-poly-support-implementation-plan.md)
+- [SW-13C Ship-External Contract-Backed Entity Feeds Implementation Plan](sw-13c/sw-13c-ship-external-contract-backed-entity-feeds-implementation-plan.md)
 - [SW-17 Computer Progression Implementation Plan](sw-17/sw-17-computer-progression-implementation-plan.md)
 - [SW-17 Computer Progression Closure Checklist](sw-17/sw-17-computer-progression-closure-checklist.md)
 

@@ -37,6 +37,7 @@ As of 2026-05-30, Orion's current view of Stellar is:
 - SW-13 is closed as a Stellar Viewer-only rendering and contract pass.
 - Deferred follow-on scope is split into SW-13A (ship-external-view support).
 - Deferred high-poly fidelity scope is split into SW-13B (Stellar Viewer and ship-external-view).
+- Deferred ship-external contract gap closure scope is split into SW-13C (gates, stations, encounter ships).
 
 ## Active Near-Term Feature Shape
 

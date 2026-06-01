@@ -44,6 +44,7 @@ Interpretation:
 | ~~SW-13~~ | External Object Presentation Expansion | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Closed 2026-05-31 as Stellar Viewer-only rendering and contract pass. |
 | SW-13A | Ship-External-View Support for External Object Presentation | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Follow-on from SW-13 to deliver ship-external-view support. |
 | SW-13B | High-Poly Support for External Object Presentation | H1/H2 bridge | 4 | 4 | 3 | 4 | 5 | 3.60 | Follow-on from SW-13 for high-poly support across Stellar Viewer and ship-external-view. |
+| SW-13C | Ship-External Contract-Backed Entity Feeds | H1/H2 bridge | 4 | 3 | 3 | 4 | 5 | 3.75 | Follow-on from SW-13A to add contract-backed gates, stations, and encounter ships. |
 | SW-14 | In-System Short-Hop Drive | H1/H2 bridge | 5 | 3 | 3 | 4 | 5 | 4.00 | Makes in-system travel practical without removing fuel and route pressure |
 | SW-15 | Minimal Character Bust Builder v0 | H1/H2 bridge | 4 | 4 | 3 | 4 | 5 | 3.60 | Browser-friendly bust customization for player identity and NPC reuse |
 | SW-16 | Ship-External Target Persistence on Re-Entry | H1 | 4 | 2 | 2 | 2 | 5 | 4.30 | Preserve current target when re-entering ship-external-view if target remains valid |
@@ -73,8 +74,9 @@ Revised canonical ranking (descending by score):
 18. SW-09 NPC Presence v0 (Belt Pirate Runtime) (3.75)
 19. SW-11 Skill Gating Scaffold (Mining First) (3.75)
 20. SW-13A Ship-External-View Support for External Object Presentation (3.75)
-21. SW-15 Minimal Character Bust Builder v0 (3.60)
-22. SW-13B High-Poly Support for External Object Presentation (3.60)
+21. SW-13C Ship-External Contract-Backed Entity Feeds (3.75)
+22. SW-15 Minimal Character Bust Builder v0 (3.60)
+23. SW-13B High-Poly Support for External Object Presentation (3.60)
 
 Tie-break rule used for equal scores: prefer lower risk and fewer dependencies for H1.
 
