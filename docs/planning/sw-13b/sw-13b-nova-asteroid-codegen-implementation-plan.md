@@ -184,9 +184,9 @@ These decisions were confirmed for the first Nova asteroid M0B execution wave:
 Use this prompt to initiate execution with Nova:
 
 "Execute SW-13B M0B asteroid baseline under the code-generation-only policy using these reference docs:
-- https://github.com/<org>/<repo>/blob/<branch>/docs/planning/sw-13b/sw-13b-asteroid-generator-spec.md
-- https://github.com/<org>/<repo>/blob/<branch>/docs/planning/sw-13b/sw-13b-high-poly-support-implementation-plan.md
-- https://github.com/<org>/<repo>/blob/<branch>/docs/planning/sw-13b/sw-13b-nova-asteroid-codegen-implementation-plan.md
+- https://github.com/qagwaai/miniature-octo-waffle/blob/main/docs/planning/sw-13b/sw-13b-asteroid-generator-spec.md
+- https://github.com/qagwaai/miniature-octo-waffle/blob/main/docs/planning/sw-13b/sw-13b-high-poly-support-implementation-plan.md
+- https://github.com/qagwaai/miniature-octo-waffle/blob/main/docs/planning/sw-13b/sw-13b-nova-asteroid-codegen-implementation-plan.md
 
 Apply locked decisions:
 - Balanced coverage with baseline and hero seed presence across SV and SEV.
