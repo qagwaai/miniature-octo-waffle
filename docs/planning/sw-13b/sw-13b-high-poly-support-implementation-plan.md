@@ -13,13 +13,16 @@ Companion spec:
 
 Deliver high-poly hero-asset readiness for external object presentation across Stellar Viewer and ship-external-view without introducing contract drift.
 
+Asteroid family exception: SW-13B asteroids are delivered through code-based generation in Nova, not sourced through marketplace or commissioned asset channels.
+
 ## Scope
 
 In scope:
 1. High-poly readiness matrix for debris, ships, gates, stations, and asteroids.
 2. Surface parity checks for high-poly behavior in Stellar Viewer and ship-external-view.
-3. Proxy mapping policy with owners and dated replacement commitments where assets are missing.
+3. Proxy mapping policy with owners and dated replacement commitments where sourced assets are missing.
 4. Canary burn-down tracking for proxy replacement and visual fidelity gaps.
+5. Asteroid generation registry and seed coverage tracking for code-generated asteroid outputs.
 
 Out of scope:
 1. New descriptor schema families unless explicitly approved by Orion.
@@ -28,6 +31,10 @@ Out of scope:
 ## High-Poly Sourcing Strategy
 
 Use a staged sourcing funnel so SW-13B can deliver predictable quality without blocking milestones.
+
+Asteroid exception:
+1. The staged sourcing funnel applies to debris, ships, gates, and stations.
+2. Asteroids are excluded from sourcing and are generated in code by Nova according to the companion asteroid generator spec.
 
 Priority order:
 1. Internal library reuse (existing project assets upgraded or re-authored).
@@ -39,7 +46,7 @@ Family coverage targets:
 2. Ships: role and faction readable hero silhouettes.
 3. Gates: landmark-grade meshes with strong framing profiles.
 4. Stations: long-range readable structural identity sets.
-5. Asteroids: irregular hero variants with non-repetitive profiles.
+5. Asteroids: irregular baseline and hero variants produced through deterministic code generation with seed governance.
 
 ## Source Channels and Governance
 
@@ -47,6 +54,7 @@ Approved channels:
 1. Internal source repositories with documented ownership.
 2. Curated asset marketplaces with commercial-use licenses.
 3. Approved external vendors under written work-for-hire or equivalent transfer terms.
+4. Asteroids are not sourced from approved channels and must be generated through the Nova runtime generator path.
 
 Governance rules:
 1. Every sourced asset must have a provenance record: source, license, owner, acquisition date.
@@ -55,6 +63,8 @@ Governance rules:
 4. Assets with unclear modification rights are rejected.
 
 ## Acceptance Gates for Sourced Assets
+
+Applies to non-asteroid families only.
 
 Technical acceptance:
 1. Imports cleanly into project pipeline without format workarounds.
@@ -94,6 +104,20 @@ Operational acceptance:
 7. Canary burn-down
 - Track unresolved fidelity gaps and close proxy debt against dated commitments.
 
+## Asteroid Code-Generation Workflow
+
+1. Generator definition and lock
+- Orion and Nova lock seed taxonomy, profile presets, and parameter bundles.
+
+2. Runtime implementation
+- Nova implements deterministic runtime generation for both Stellar Viewer and ship-external-view paths.
+
+3. Validation and evidence
+- Nova publishes deterministic reproducibility evidence, parity evidence, and performance evidence by seed set.
+
+4. Registry and coverage reporting
+- Orion and Nova publish and maintain asteroid generation registry and seed coverage table through M0B to M4B.
+
 ## Sourcing Risks and Mitigations
 
 1. Risk: licensing mismatch discovered late.
@@ -108,23 +132,35 @@ Operational acceptance:
 4. Risk: proxy debt persists into release.
 - Mitigation: enforce owner assignment, dated replacement commitments, and canary burn-down reporting.
 
+5. Risk: runtime generator divergence across surfaces.
+- Mitigation: enforce deterministic seed governance, shared parameter bundle hashes, and parity validation in M1B-M3B.
+
+6. Risk: generated asteroids exceed runtime budget in dense scenes.
+- Mitigation: enforce per-seed performance probes and fail gates before milestone sign-off.
+
 ## Milestones
 
 M0B: Asset readiness baseline
-- Publish high-poly matrix with owner, status, and target replacement dates.
-- Publish sourcing channel and licensing status for each matrix row.
+- Publish high-poly matrix with owner, status, and target replacement dates for sourced families.
+- Publish sourcing channel and licensing status for each non-asteroid sourced matrix row.
+- Publish asteroid generation registry with seed IDs, generator version, and parameter bundle hashes.
+- Publish asteroid seed coverage table by profile, material, and target surface.
 
 M1B: Stellar Viewer high-poly pass
 - Verify high-poly readiness and fallback behavior in Stellar Viewer.
+- Verify runtime code-generated asteroid behavior and determinism in Stellar Viewer.
 
 M2B: ship-external-view high-poly pass
 - Verify high-poly readiness and fallback behavior in ship-external-view.
+- Verify runtime code-generated asteroid behavior and determinism in ship-external-view.
 
 M3B: Dual-surface parity pass
 - Validate visual identity parity and fallback equivalence across both surfaces.
+- Validate asteroid seed parity across surfaces using shared registry records.
 
 M4B: Canary fidelity pass
 - Run canary telemetry and issue triage focused on high-poly and proxy burn-down.
+- Run canary telemetry and issue triage for generated asteroid fidelity and runtime budget stability.
 
 ## Exit Criteria
 
@@ -132,3 +168,5 @@ M4B: Canary fidelity pass
 2. No unresolved P1/P2 visual-fidelity issues linked to missing high-poly support.
 3. Dual-surface fidelity behavior is consistent with Orion acceptance criteria.
 4. Contract behavior remains aligned with Forge openapi.yaml and SW-13 family semantics.
+5. Asteroid family has no marketplace or commissioned asset dependencies for SW-13B.
+6. Asteroid generation registry and seed coverage table are published and current.

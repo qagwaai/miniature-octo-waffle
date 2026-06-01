@@ -25,8 +25,14 @@ Primary model:
 8. Base material pass: select one canonical raw material from the materials catalog and apply its shading and breakup bias.
 
 Pipeline mode:
-1. Offline generation and bake (not runtime procedural generation in Forge).
+1. Runtime procedural generation in Nova for Stellar Viewer and ship-external-view.
 2. Deterministic seed-driven output for exact reproducibility.
+3. Forge does not source marketplace or commissioned asteroid assets for SW-13B.
+
+Policy lock:
+1. Asteroid geometry for SW-13B is code-generated only.
+2. Marketplace asteroid assets are not allowed for this feature.
+3. Commissioned asteroid assets are not allowed for this feature.
 
 ## Canonical Material Source
 
@@ -349,7 +355,8 @@ Required metadata fields:
 
 1. M0B
 - Publish seed taxonomy, profile presets, and initial parameter bundles.
-- Build initial matrix with source channel, license status, owner, and replacement date (if proxy).
+- Publish asteroid generation registry with seed IDs, generator version, and parameter bundle hashes.
+- Publish seed coverage table by profile, material, and target surface.
 
 2. M1B
 - Validate baseline and hero asteroid sets in Stellar Viewer.
@@ -361,7 +368,7 @@ Required metadata fields:
 - Validate dual-surface parity for identity, LOD behavior, and fallback semantics.
 
 5. M4B
-- Canary burn-down for unresolved proxy and fidelity issues.
+- Canary burn-down for unresolved generation and fidelity issues.
 
 ## Open Decisions for Orion Lock
 
