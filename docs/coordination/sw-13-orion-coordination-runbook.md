@@ -86,7 +86,7 @@ Exit evidence:
 
 Current status note:
 - Nova reports M0 deliverables complete.
-- Orion gate remains open until Nova evidence is reviewed and accepted.
+- Orion gate closed on 2026-05-31 for SW-13 Stellar Viewer-only closure scope.
 
 M0 Step 1 decision lock (for Step 2 fixture generation):
 1. Fallback tier naming remains exactly: hero, standard, minimal.
@@ -118,7 +118,7 @@ Exit evidence:
 Current status note:
 - Forge reports M1 deliverables complete.
 - Nova reports M1 deliverables complete.
-- Orion gate remains open until Nova evidence is attached and reviewed.
+- Orion gate closed on 2026-05-31 for SW-13 Stellar Viewer-only closure scope.
 
 ### M2 - Ship and Station Family Pass
 
@@ -148,7 +148,7 @@ M2 decision lock (for Nova evidence pass):
 
 Current status note:
 - Forge reports M2 deliverables complete.
-- Orion gate remains open until Nova route-smoke and recognition evidence is attached and reviewed.
+- Orion gate closed on 2026-05-31 for SW-13 Stellar Viewer-only closure scope.
 
 ### M3 - Jump Gate Landmark Pass
 
@@ -179,7 +179,7 @@ M3 decision lock (for Nova evidence pass):
 
 Current status note:
 - Forge reports M3 deliverables complete.
-- Orion gate remains open until Nova route-smoke and ambiguity evidence is attached and reviewed.
+- Orion gate closed on 2026-05-31 for SW-13 Stellar Viewer-only closure scope.
 
 ### M4 - Balanced Performance Validation
 
@@ -209,7 +209,7 @@ M4 decision lock (for Nova evidence pass):
 
 Current status note:
 - Forge reports M4 deliverables complete.
-- Orion gate remains open until Nova dense-scene, runtime-guardrail, and parity evidence is attached and reviewed.
+- Orion gate closed on 2026-05-31 for SW-13 Stellar Viewer-only closure scope.
 
 ### M5 - Canary Validation
 

@@ -14,4 +14,4 @@ This repository stores durable project knowledge, architecture best practices, c
 
 ## Working Rule
 
-Keep long-lived decisions in docs, keep current state date-stamped, and keep cross-repo ownership explicit so Nova and Forge can move independently without losing the shared Stellar direction.# miniature-octo-waffle
+Keep long-lived decisions in docs, keep current state date-stamped, and keep cross-repo ownership explicit so Nova and Forge can move independently without losing the shared Stellar direction.

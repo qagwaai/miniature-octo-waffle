@@ -252,9 +252,10 @@ If fewer than three answers are yes, re-scope or defer.
 
 - Conversation context and project origin details
 - Existing architecture and policy documents in this repository
-- Mission and narrative inputs from:
-	- docs/First Target.md
-	- docs/Stellar Main and side missions.md
-	- docs/Stellar notes.md
-- Resource and crafting inputs from:
-	- docs/Stellar mineable raw elements - Mineable Materials.csv
+- Current-state and coordination inputs from:
+	- docs/state/current-project-state.md
+	- docs/coordination/orion-nova-forge-roles.md
+	- docs/coordination/forge-openapi-contract-policy.md
+- Planning and prioritization inputs from:
+	- docs/planning/stellar-brainstorming-findings-2026-05-24.md
+	- docs/planning/stellar-feature-prioritization-matrix-2026-05-24.md
