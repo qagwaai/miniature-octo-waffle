@@ -39,6 +39,8 @@ This document defines the working boundary for the Stellar coordination model.
 ## Feature Coordination Runbooks
 
 - SW-13 handoff and gate runbook: [docs/coordination/sw-13-orion-coordination-runbook.md](sw-13-orion-coordination-runbook.md)
+- SW-15 handoff and gate runbook: [docs/coordination/sw-15-orion-coordination-runbook.md](sw-15-orion-coordination-runbook.md)
+- SW-15 Nova-Forge sequence guide: [docs/coordination/sw-15-nova-forge-implementation-sequence.md](sw-15-nova-forge-implementation-sequence.md)
 - SW-17 handoff and gate runbook: [docs/coordination/sw-17-orion-coordination-runbook.md](sw-17-orion-coordination-runbook.md)
 
 ## Contract Authority

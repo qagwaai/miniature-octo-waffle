@@ -1,6 +1,6 @@
 # SW-13C Ship-External Contract-Backed Entity Feeds Implementation Plan (Nova + Forge)
 
-Status: Draft (Execution Ready)
+Status: Closed
 Date: 2026-05-31
 Repos: laughing-octo-journey (Nova), solid-train (Forge)
 Feature ID: SW-13C

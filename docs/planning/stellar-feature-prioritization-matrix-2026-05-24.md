@@ -73,10 +73,10 @@ Revised canonical ranking (descending by score):
 17. SW-12 Minimal Ship-to-Ship Encounter v0 (3.85)
 18. SW-09 NPC Presence v0 (Belt Pirate Runtime) (3.75)
 19. SW-11 Skill Gating Scaffold (Mining First) (3.75)
-20. SW-13A Ship-External-View Support for External Object Presentation (3.75)
-21. SW-13C Ship-External Contract-Backed Entity Feeds (3.75)
+20. ~~SW-13A Ship-External-View Support for External Object Presentation (3.75)~~
+21. ~~SW-13C Ship-External Contract-Backed Entity Feeds (3.75)~~
 22. SW-15 Minimal Character Bust Builder v0 (3.60)
-23. SW-13B High-Poly Support for External Object Presentation (3.60)
+23. ~~SW-13B High-Poly Support for External Object Presentation (3.60)~~
 
 Tie-break rule used for equal scores: prefer lower risk and fewer dependencies for H1.
 
@@ -97,6 +97,10 @@ Computer progression policy note:
 
 1. [SW-17 Computer Progression Implementation Plan](sw-17/sw-17-computer-progression-implementation-plan.md)
 2. [SW-17 Computer Progression Closure Checklist](sw-17/sw-17-computer-progression-closure-checklist.md)
+
+## SW-15 Planning Artifacts (2026-06-05)
+
+1. [SW-15 Minimal Character Bust Builder v0 Implementation Plan](sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md)
 
 ## SW-13 Planning Artifacts (2026-05-30)
 
