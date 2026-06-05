@@ -80,17 +80,17 @@ Nova implementation starts only after Forge M0 contract plus persistence lock ev
 
 | ID | Owner | Item | Required Evidence | Status | Evidence Link | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| M0-01 | Forge | SW-15 schema components added in openapi.yaml | OpenAPI component names and PR link | Pending | TBD | |
-| M0-02 | Forge | Enum domains locked for all required customization fields | Enum table and schema references | Pending | TBD | |
-| M0-03 | Forge | Playable-character bust create/update/read request and response shapes locked | Endpoint list and schema references | Pending | TBD | |
-| M0-04 | Forge | NPC bust create/update/read request and response shapes locked, including deterministic seed and override support | Endpoint list and schema references | Pending | TBD | |
-| M0-05 | Forge | Hard reject validation error schema locked | Error schema reference and example payload | Pending | TBD | |
-| M0-06 | Forge | Persistence model shape locked for playable-character and NPC records with presetVersion/schemaVersion | Model definition and migration notes | Pending | TBD | |
-| M0-07 | Forge | Canonical pass fixture package published | Fixture paths and test output | Pending | TBD | |
-| M0-08 | Forge | Intentional mismatch fixture package published and hard-fail verified | Fixture paths and failing output | Pending | TBD | |
-| M0-09 | Forge | Seed replay fixture published for deterministic NPC baseline | Fixture path and replay output | Pending | TBD | |
-| M0-10 | Nova | Fixture compatibility verification completed | Adapter verification note and test output | Pending | TBD | |
-| M0-11 | Orion | M0 evidence package reviewed and accepted | Gate note with all evidence links | Pending | TBD | |
+| M0-01 | Forge | SW-15 schema components added in openapi.yaml | OpenAPI component names and PR link | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | 14 new components/schemas: BustDescriptor, BustValidationErrorResponse, 6× CharacterBust*, 6× NpcBust* |
+| M0-02 | Forge | Enum domains locked for all required customization fields | Enum table and schema references | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | 8 enum domains locked in bust-descriptor.schema.json and aligned with runtime model in src/model/bust-descriptor.js |
+| M0-03 | Forge | Playable-character bust create/update/read request and response shapes locked | Endpoint list and schema references | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | /socket/character-bust-create, /socket/character-bust-read, /socket/character-bust-update |
+| M0-04 | Forge | NPC bust create/update/read request and response shapes locked, including deterministic seed and override support | Endpoint list and schema references | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | /socket/npc-bust-create, /socket/npc-bust-read, /socket/npc-bust-update; deterministicSeed + overrides in request schemas |
+| M0-05 | Forge | Hard reject validation error schema locked | Error schema reference and example payload | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | BustValidationErrorResponse: success: false, validationErrors[] with field/reason/rejectedValue |
+| M0-06 | Forge | Persistence model shape locked for playable-character and NPC records with presetVersion/schemaVersion | Model definition and migration notes | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | Player.characters[].bust embedded subdoc + npc_busts collection; schemaVersion pinned to sw-15-m0-v1; MONGODB_SCHEMA.md updated |
+| M0-07 | Forge | Canonical pass fixture package published | Fixture paths and test output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/character-bust-canonical-pass.json; 16/16 tests pass |
+| M0-08 | Forge | Intentional mismatch fixture package published and hard-fail verified | Fixture paths and failing output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/character-bust-mismatch-fail.json; faceShape: "triangle" hard-fails with correct rejectedValue |
+| M0-09 | Forge | Seed replay fixture published for deterministic NPC baseline | Fixture path and replay output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/npc-bust-seed-replay.json; seed faction:trade\|role:merchant\|id:001 → stable descriptor verified |
+| M0-10 | Nova | Fixture compatibility verification completed | Adapter verification note and test output | Pending | TBD | Blocked on Nova M0-V acknowledgment in sw-15-m0-nova-handoff.md |
+| M0-11 | Orion | M0 evidence package reviewed and accepted | Gate note with all evidence links | Pending | TBD | Blocked on M0-10 Nova acknowledgment |
 
 ## M0 Exit Gate
 
