@@ -38,17 +38,18 @@ Decision Lock to Implement:
 5. Invalid payloads: hard reject with explicit validation errors.
 6. Downstream quality target: support Nova validation gate of <150ms median preview updates on desktop and mid-range laptop profiles.
 7. No source-of-truth drift: openapi.yaml is authoritative.
+8. Entity ownership model: busts are character-scoped (playable-character and NPC), not account-scoped.
 
 M0 Deliverables Required From Forge:
 1. openapi.yaml updates for SW-15:
 - Bust descriptor schema components.
 - Enum domains for all required customization fields.
-- Request and response shapes for player bust create/update/read.
+- Request and response shapes for playable-character bust create/update/read.
 - Request and response shapes for NPC bust create/update/read (including deterministic seed and override support).
 - Explicit error schema for hard validation rejects.
 
 2. Persistence model baseline:
-- Player bust record shape.
+- Playable-character bust record shape.
 - NPC bust record shape.
 - Required fields include presetVersion and schemaVersion.
 - Normalization semantics documented.
@@ -81,10 +82,10 @@ Nova implementation starts only after Forge M0 contract plus persistence lock ev
 | --- | --- | --- | --- | --- | --- | --- |
 | M0-01 | Forge | SW-15 schema components added in openapi.yaml | OpenAPI component names and PR link | Pending | TBD | |
 | M0-02 | Forge | Enum domains locked for all required customization fields | Enum table and schema references | Pending | TBD | |
-| M0-03 | Forge | Player bust create/update/read request and response shapes locked | Endpoint list and schema references | Pending | TBD | |
+| M0-03 | Forge | Playable-character bust create/update/read request and response shapes locked | Endpoint list and schema references | Pending | TBD | |
 | M0-04 | Forge | NPC bust create/update/read request and response shapes locked, including deterministic seed and override support | Endpoint list and schema references | Pending | TBD | |
 | M0-05 | Forge | Hard reject validation error schema locked | Error schema reference and example payload | Pending | TBD | |
-| M0-06 | Forge | Persistence model shape locked for player and NPC records with presetVersion/schemaVersion | Model definition and migration notes | Pending | TBD | |
+| M0-06 | Forge | Persistence model shape locked for playable-character and NPC records with presetVersion/schemaVersion | Model definition and migration notes | Pending | TBD | |
 | M0-07 | Forge | Canonical pass fixture package published | Fixture paths and test output | Pending | TBD | |
 | M0-08 | Forge | Intentional mismatch fixture package published and hard-fail verified | Fixture paths and failing output | Pending | TBD | |
 | M0-09 | Forge | Seed replay fixture published for deterministic NPC baseline | Fixture path and replay output | Pending | TBD | |

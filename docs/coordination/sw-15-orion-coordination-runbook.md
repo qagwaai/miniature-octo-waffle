@@ -20,6 +20,7 @@ Define explicit Orion coordination handoff gates for SW-15 milestones M0-M6 so F
 5. Invalid payload policy: hard reject with explicit validation errors.
 6. Visual quality bar: distinct identity at profile-card and comms-dialog sizes, no uncanny placeholder look in canary captures.
 7. Preview performance target: <150ms median update on desktop and mid-range laptop baseline profiles.
+8. Entity ownership model: busts are character-scoped (playable-character and NPC), not account-scoped.
 
 ## Implementation Order
 
@@ -33,7 +34,7 @@ Define explicit Orion coordination handoff gates for SW-15 milestones M0-M6 so F
 | Area | Orion | Forge | Nova |
 | --- | --- | --- | --- |
 | Bust descriptor schema and enum domains | Accountable | Responsible | Consulted |
-| Player/NPC bust persistence lifecycle | Accountable | Responsible | Consulted |
+| Playable-character/NPC bust persistence lifecycle | Accountable | Responsible | Consulted |
 | Bust builder UX and preview behavior | Accountable | Consulted | Responsible |
 | Drift gates and release readiness | Accountable | Responsible | Responsible |
 
@@ -43,11 +44,11 @@ Define explicit Orion coordination handoff gates for SW-15 milestones M0-M6 so F
 
 Entry criteria:
 - SW-15 v0 scope frozen.
-- Descriptor domains agreed for player and NPC usage.
+- Descriptor domains agreed for playable-character and NPC usage.
 
 Forge deliverables:
 - Canonical bust descriptor schema and enum domain list.
-- Persistence shape for player and NPC bust records.
+- Persistence shape for playable-character and NPC bust records.
 - Strict validation and mismatch fixtures.
 
 Nova deliverables:
@@ -66,7 +67,7 @@ Entry criteria:
 - M0 complete with signed baseline.
 
 Forge deliverables:
-- Player bust create/update/read lifecycle finalized.
+- Playable-character bust create/update/read lifecycle finalized.
 - NPC bust preset and seed-backed persistence lifecycle finalized.
 
 Nova deliverables:

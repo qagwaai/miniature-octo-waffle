@@ -29,6 +29,7 @@ Define the execution choreography between Forge and Nova for SW-15 so both teams
 5. Invalid payload handling: hard reject with explicit validation errors.
 6. Visual acceptance gates: distinct identity at profile-card and comms-dialog sizes, no uncanny placeholder look in canary captures.
 7. Performance gate: <150ms median preview update on desktop and mid-range laptop baseline profiles.
+8. Entity ownership model: busts are character-scoped (playable-character and NPC), not account-scoped.
 
 ## Milestone Sequence (M0-M6)
 
@@ -36,7 +37,7 @@ Define the execution choreography between Forge and Nova for SW-15 so both teams
 
 Sequence:
 1. Forge M0-A: Publish SW-15 schema components and enum domains in openapi.yaml.
-2. Forge M0-B: Publish persistence model shape for player and NPC bust records.
+2. Forge M0-B: Publish persistence model shape for playable-character and NPC bust records.
 3. Forge M0-C: Provide pass fixture and intentional mismatch fixtures.
 4. Nova M0-V: Verify fixture compatibility against planned preview mapping paths.
 5. Joint M0-J: Orion signs baseline lock.
@@ -51,7 +52,7 @@ Milestone close evidence:
 ### M1 - Persistence Lifecycle
 
 Sequence:
-1. Forge M1-A: Implement create/update/read lifecycle for player bust descriptor.
+1. Forge M1-A: Implement create/update/read lifecycle for playable-character bust descriptor.
 2. Forge M1-B: Implement preset and seed-backed lifecycle for NPC bust descriptor.
 3. Forge M1-C: Enforce validation and normalization on all write paths and return explicit hard-reject validation errors on invalid payloads.
 4. Nova M1-V: Integrate adapter layer for load/save and normalized response handling.

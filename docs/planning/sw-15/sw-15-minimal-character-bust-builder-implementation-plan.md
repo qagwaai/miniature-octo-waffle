@@ -29,13 +29,20 @@ This slice is preset-driven, contract-backed, persistence-first, and determinist
 12. Visual acceptance baseline: distinct identity at profile-card and comms-dialog sizes with no uncanny placeholder presentation in canary captures.
 13. Performance baseline: live preview target is <150ms median update on desktop and mid-range laptop baseline profiles.
 
+## 2A. Entity Ownership Clarification
+
+1. Bust ownership is character-scoped, not account-scoped.
+2. A player may edit bust settings only for the currently selected playable character.
+3. Persistence targets are playable-character records and NPC records.
+4. No global player-level bust profile is used as source-of-truth in SW-15.
+
 ## 3. Scope
 
 In scope (SW-15 v0):
 1. Bust descriptor model for a constrained set of customization domains (face shape, skin tone, hair, eyes, apparel accent, expression preset).
-2. Player bust create/edit flow with live preview and deterministic reset-to-default action.
+2. Playable-character bust create/edit flow with live preview and deterministic reset-to-default action.
 3. NPC bust reuse model via descriptor presets and role/faction seed variants.
-4. Backend persistence for player bust profile and NPC bust descriptors.
+4. Backend persistence for playable-character bust profile and NPC bust descriptors.
 5. Contract-backed validation and normalization for all bust descriptor writes.
 6. Browser-safe rendering mode with deterministic fallback for missing assets.
 
@@ -83,7 +90,7 @@ Out of scope (defer):
 1. Forge contract and persistence updates
 - Define SW-15 bust descriptor schema and enum domains.
 - Add strict request validation and descriptor normalization.
-- Persist player bust descriptor and NPC bust descriptor records with presetVersion/schemaVersion fields.
+- Persist playable-character bust descriptor and NPC bust descriptor records with presetVersion/schemaVersion fields.
 - Expose read/write endpoints or events for bust configuration lifecycle.
 
 2. Nova bust builder UX and renderer integration
@@ -93,7 +100,7 @@ Out of scope (defer):
 - Surface explicit validation and blocked-save reasons from contract responses.
 
 3. Shared deterministic preset and seed policy
-- Define canonical defaults for player bust bootstrap.
+- Define canonical defaults for playable-character bust bootstrap.
 - Define NPC role/faction preset maps and seed strategy.
 - Keep descriptor-to-render mapping pure and fixture-testable.
 
@@ -114,7 +121,7 @@ M0: Contract baseline and descriptor taxonomy lock
 
 M1: Persistence lifecycle implementation
 - Deliverables:
-1. Player bust create/update/read path implemented.
+1. Playable-character bust create/update/read path implemented.
 2. NPC bust preset and seed-backed descriptor storage implemented.
 - Verification:
 1. Integration tests for save and reload pass.
@@ -178,7 +185,7 @@ M6: Release decision
 ## 9. Exit Criteria
 
 1. Milestones M0-M6 closed with evidence.
-2. Player bust customization save/reload works reliably with database persistence using normalized descriptors plus presetVersion/schemaVersion.
+2. Playable-character bust customization save/reload works reliably with database persistence using normalized descriptors plus presetVersion/schemaVersion.
 3. NPC reuse descriptors are deterministic and reproducible.
 4. Contract and renderer behavior are aligned with no silent fallback paths.
 5. Canary soak completes without unresolved high-severity incidents.
