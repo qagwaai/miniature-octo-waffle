@@ -1,6 +1,6 @@
 # SW-15 Orion Coordination Runbook
 
-Status: Active — M0 and M1 closed; M2 execution authorized
+Status: Active — M0 and M1 closed; Forge M2-A complete; awaiting Nova M2-A
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
@@ -10,6 +10,9 @@ M1 Forge kickoff prompt: ./sw-15-m1-forge-kickoff-prompt.md
 M1 Forge verification note: ./sw-15-m1-forge-verification-note-2026-06-05.md
 Nova M1-V prompt: ./sw-15-m1v-nova-prompt.md
 M1 Orion gate note: ./sw-15-m1-orion-gate-note-2026-06-05.md
+M2-A Forge kickoff prompt: ./sw-15-m2a-forge-kickoff-prompt.md
+M2-A Forge verification note: ./sw-15-m2a-forge-verification-note-2026-06-05.md
+Nova M2-A prompt: ./sw-15-m2a-nova-prompt.md
 
 ## Purpose
 
@@ -104,6 +107,14 @@ Exit evidence:
 
 ### M2 - Nova Builder Baseline
 
+Status update (2026-06-05):
+1. Forge M2-A response semantics lock reported complete.
+2. Blocked-save response semantics are now contract-defined via `BustBlockedSaveResponse`.
+3. Intentional OpenAPI contract additions for M2-A were made in-source and documented.
+4. Test result reported: 22 pass, 0 fail.
+5. Handoff status: ready for Nova M2-A.
+6. Evidence note: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md).
+
 Entry criteria:
 - M1 complete.
 
@@ -120,6 +131,9 @@ Orion gate check:
 
 Exit evidence:
 - Component tests for control-to-preview mapping and route smoke tests for edit lifecycle.
+- Forge M2-A verification report: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md)
+- Semantic lock tests: `node --test test/sw15-m0-contract-hardening.test.js test/sw15-m1-persistence-lifecycle.mongo.integration.test.js` (22 pass, 0 fail)
+- Contract additions include `BustBlockedSaveResponse` and typed blocked-save variants on create/update responses.
 
 ### M3 - NPC Reuse and Deterministic Identity
 

@@ -1,6 +1,6 @@
 # SW-15 Nova-Forge Implementation Sequence
 
-Status: Active
+Status: Active — M0 and M1 closed; Forge M2-A complete; awaiting Nova M2-A
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary implementation plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
@@ -11,6 +11,9 @@ M1 Forge kickoff prompt: ./sw-15-m1-forge-kickoff-prompt.md
 M1 Forge verification note: ./sw-15-m1-forge-verification-note-2026-06-05.md
 Nova M1-V prompt: ./sw-15-m1v-nova-prompt.md
 M1 Orion gate note: ./sw-15-m1-orion-gate-note-2026-06-05.md
+M2-A Forge kickoff prompt: ./sw-15-m2a-forge-kickoff-prompt.md
+M2-A Forge verification note: ./sw-15-m2a-forge-verification-note-2026-06-05.md
+Nova M2-A prompt: ./sw-15-m2a-nova-prompt.md
 
 ## Purpose
 
@@ -85,6 +88,13 @@ Milestone close evidence:
 - Negative tests for strict validation rejects.
 
 ### M2 - Builder Interaction Baseline
+
+Status update (2026-06-05):
+1. Forge M2-A response semantics lock reported complete.
+2. `BustBlockedSaveResponse` contract addition introduced intentionally for M2-A.
+3. Semantic lock coverage reported with 22 pass, 0 fail.
+4. Handoff status: ready for Nova M2-A.
+5. Evidence note: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md).
 
 Sequence:
 1. Forge M2-A: Freeze response semantics for validation errors, blocked-save reasons, and normalized payload echoes.
