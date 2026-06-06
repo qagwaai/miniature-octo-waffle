@@ -8,6 +8,9 @@ Coordination runbook: ./sw-15-orion-coordination-runbook.md
 Contract authority: ./forge-openapi-contract-policy.md
 M0 kickoff checklist: ./sw-15-m0-forge-kickoff-checklist.md
 M1 Forge kickoff prompt: ./sw-15-m1-forge-kickoff-prompt.md
+M1 Forge verification note: ./sw-15-m1-forge-verification-note-2026-06-05.md
+Nova M1-V prompt: ./sw-15-m1v-nova-prompt.md
+M1 Orion gate note: ./sw-15-m1-orion-gate-note-2026-06-05.md
 
 ## Purpose
 
@@ -57,6 +60,15 @@ Milestone close evidence:
 - Fixture pass and mismatch hard-fail logs.
 
 ### M1 - Persistence Lifecycle
+
+Status update (2026-06-05):
+1. Forge M1-A, M1-B, and M1-C reported complete.
+2. Nova M1-V reported complete with adapter integration and gate-evidence package.
+3. No unresolved contract drift findings reported.
+4. Orion M1-J signed; M1 closed.
+5. M2 execution authorized.
+6. Forge evidence note: [SW-15 M1 Forge Verification Note](sw-15-m1-forge-verification-note-2026-06-05.md).
+7. Orion closure note: [SW-15 M1 Orion Gate Note](sw-15-m1-orion-gate-note-2026-06-05.md).
 
 Sequence:
 1. Forge M1-A: Implement create/update/read lifecycle for playable-character bust descriptor.

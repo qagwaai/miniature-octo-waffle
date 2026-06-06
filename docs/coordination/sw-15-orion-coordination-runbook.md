@@ -1,12 +1,15 @@
 # SW-15 Orion Coordination Runbook
 
-Status: Active — M0 closed (Orion M0-J signed), M1 execution authorized
+Status: Active — M0 and M1 closed; M2 execution authorized
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
 Sequence guide: ./sw-15-nova-forge-implementation-sequence.md
 M0 kickoff checklist: ./sw-15-m0-forge-kickoff-checklist.md
 M1 Forge kickoff prompt: ./sw-15-m1-forge-kickoff-prompt.md
+M1 Forge verification note: ./sw-15-m1-forge-verification-note-2026-06-05.md
+Nova M1-V prompt: ./sw-15-m1v-nova-prompt.md
+M1 Orion gate note: ./sw-15-m1-orion-gate-note-2026-06-05.md
 
 ## Purpose
 
@@ -68,6 +71,15 @@ Exit evidence:
 
 ### M1 - Persistence Lifecycle
 
+Status update (2026-06-05):
+1. Forge M1-A, M1-B, and M1-C complete.
+2. Nova M1-V adapter integration reported complete and evidence-ready.
+3. Endpoint and schema signatures remained stable.
+4. No unresolved drift findings reported.
+5. Orion M1-J signed; M2 execution authorized.
+6. Forge evidence note: [SW-15 M1 Forge Verification Note](sw-15-m1-forge-verification-note-2026-06-05.md).
+7. Orion gate note: [SW-15 M1 Orion Gate Note](sw-15-m1-orion-gate-note-2026-06-05.md).
+
 Entry criteria:
 - M0 complete with signed baseline.
 
@@ -82,7 +94,13 @@ Orion gate check:
 - Confirms Nova does not bypass Forge normalization or persistence semantics.
 
 Exit evidence:
-- Integration tests for save/reload round-trip and strict invalid-write rejection.
+- Forge M1 verification report: [SW-15 M1 Forge Verification Note](sw-15-m1-forge-verification-note-2026-06-05.md)
+- Integration tests: `node --test test/sw15-m0-contract-hardening.test.js test/sw15-m1-persistence-lifecycle.mongo.integration.test.js` (19 pass, 0 fail)
+- Round-trip coverage for playable-character and NPC save/read/update lifecycle.
+- Negative validation coverage for character descriptor enum mismatch and NPC override enum mismatch with explicit `validationErrors` evidence.
+- Nova M1-V verification note: https://github.com/qagwaai/laughing-octo-journey/blob/main/docs/planning/sw-15/sw-15-m1v-verification-note-2026-06-05.md
+- Nova M1-V handoff note: https://github.com/qagwaai/laughing-octo-journey/blob/main/docs/planning/sw-15/sw-15-m1v-handoff-note-2026-06-05.md
+- Orion closure decision: [SW-15 M1 Orion Gate Note](sw-15-m1-orion-gate-note-2026-06-05.md)
 
 ### M2 - Nova Builder Baseline
 
