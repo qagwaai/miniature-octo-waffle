@@ -1,6 +1,6 @@
 # SW-15 Orion Coordination Runbook
 
-Status: Active — M0 and M1 closed; Forge M2-A complete; awaiting Nova M2-A
+Status: Active — M0 and M1 closed; M2-A complete (Forge+Nova); awaiting M2-B and M2-V
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
@@ -13,6 +13,10 @@ M1 Orion gate note: ./sw-15-m1-orion-gate-note-2026-06-05.md
 M2-A Forge kickoff prompt: ./sw-15-m2a-forge-kickoff-prompt.md
 M2-A Forge verification note: ./sw-15-m2a-forge-verification-note-2026-06-05.md
 Nova M2-A prompt: ./sw-15-m2a-nova-prompt.md
+Nova M2-A verification note: ./sw-15-m2a-nova-verification-note-2026-06-05.md
+M2-A1 Orion execution plan: ./sw-15-m2a1-orion-execution-plan-2026-06-05.md
+M2-A1 Nova handoff prompt: ./sw-15-m2a1-nova-handoff-prompt-2026-06-05.md
+M2-A1 verification checklist: ./sw-15-m2a1-verification-checklist-2026-06-05.md
 
 ## Purpose
 
@@ -111,9 +115,12 @@ Status update (2026-06-05):
 1. Forge M2-A response semantics lock reported complete.
 2. Blocked-save response semantics are now contract-defined via `BustBlockedSaveResponse`.
 3. Intentional OpenAPI contract additions for M2-A were made in-source and documented.
-4. Test result reported: 22 pass, 0 fail.
-5. Handoff status: ready for Nova M2-A.
-6. Evidence note: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md).
+4. Forge semantic lock test result reported: 22 pass, 0 fail.
+5. Nova M2-A baseline integration reported complete and gate-ready.
+6. Nova M2-A test results reported: unit/component 41 pass, e2e 6 pass, build success.
+7. M2 gate remains open pending Nova M2-B and Forge M2-V.
+8. Forge evidence note: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md).
+9. Nova evidence note: [SW-15 M2-A Verification Note (Nova)](sw-15-m2a-nova-verification-note-2026-06-05.md).
 
 Entry criteria:
 - M1 complete.
@@ -134,6 +141,8 @@ Exit evidence:
 - Forge M2-A verification report: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md)
 - Semantic lock tests: `node --test test/sw15-m0-contract-hardening.test.js test/sw15-m1-persistence-lifecycle.mongo.integration.test.js` (22 pass, 0 fail)
 - Contract additions include `BustBlockedSaveResponse` and typed blocked-save variants on create/update responses.
+- Nova M2-A verification report: [SW-15 M2-A Verification Note (Nova)](sw-15-m2a-nova-verification-note-2026-06-05.md)
+- Nova M2-A reports selector/live-preview baseline complete with blocked-save and validation error panels.
 
 ### M3 - NPC Reuse and Deterministic Identity
 

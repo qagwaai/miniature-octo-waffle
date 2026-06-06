@@ -1,6 +1,6 @@
 # SW-15 Nova-Forge Implementation Sequence
 
-Status: Active — M0 and M1 closed; Forge M2-A complete; awaiting Nova M2-A
+Status: Active — M0 and M1 closed; M2-A complete (Forge+Nova); awaiting M2-B and M2-V
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary implementation plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
@@ -14,6 +14,10 @@ M1 Orion gate note: ./sw-15-m1-orion-gate-note-2026-06-05.md
 M2-A Forge kickoff prompt: ./sw-15-m2a-forge-kickoff-prompt.md
 M2-A Forge verification note: ./sw-15-m2a-forge-verification-note-2026-06-05.md
 Nova M2-A prompt: ./sw-15-m2a-nova-prompt.md
+Nova M2-A verification note: ./sw-15-m2a-nova-verification-note-2026-06-05.md
+M2-A1 Orion execution plan: ./sw-15-m2a1-orion-execution-plan-2026-06-05.md
+M2-A1 Nova handoff prompt: ./sw-15-m2a1-nova-handoff-prompt-2026-06-05.md
+M2-A1 verification checklist: ./sw-15-m2a1-verification-checklist-2026-06-05.md
 
 ## Purpose
 
@@ -92,9 +96,12 @@ Milestone close evidence:
 Status update (2026-06-05):
 1. Forge M2-A response semantics lock reported complete.
 2. `BustBlockedSaveResponse` contract addition introduced intentionally for M2-A.
-3. Semantic lock coverage reported with 22 pass, 0 fail.
-4. Handoff status: ready for Nova M2-A.
-5. Evidence note: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md).
+3. Forge semantic lock coverage reported with 22 pass, 0 fail.
+4. Nova M2-A baseline integration reported complete and gate-ready.
+5. Nova M2-A tests reported: unit/component 41 pass, e2e 6 pass, build success.
+6. M2 gate remains open pending Nova M2-B and Forge M2-V.
+7. Forge evidence note: [SW-15 M2-A Forge Verification Note](sw-15-m2a-forge-verification-note-2026-06-05.md).
+8. Nova evidence note: [SW-15 M2-A Verification Note (Nova)](sw-15-m2a-nova-verification-note-2026-06-05.md).
 
 Sequence:
 1. Forge M2-A: Freeze response semantics for validation errors, blocked-save reasons, and normalized payload echoes.
