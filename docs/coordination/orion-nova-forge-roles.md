@@ -43,6 +43,13 @@ This document defines the working boundary for the Stellar coordination model.
 - SW-15 Nova-Forge sequence guide: [docs/coordination/sw-15-nova-forge-implementation-sequence.md](sw-15-nova-forge-implementation-sequence.md)
 - SW-17 handoff and gate runbook: [docs/coordination/sw-17-orion-coordination-runbook.md](sw-17-orion-coordination-runbook.md)
 
+## Security Coordination Artifacts
+
+- SW security repo hardening checklist: [docs/coordination/sw-security-repo-hardening-checklist-2026-06-06.md](sw-security-repo-hardening-checklist-2026-06-06.md)
+- SW GitHub settings security baseline: [docs/coordination/sw-security-github-settings-baseline-2026-06-06.md](sw-security-github-settings-baseline-2026-06-06.md)
+- SW security rollout plan: [docs/coordination/sw-security-rollout-plan-2026-06-06.md](sw-security-rollout-plan-2026-06-06.md)
+- SW GitHub settings click-path checklist: [docs/coordination/sw-security-github-click-path-checklist-2026-06-06.md](sw-security-github-click-path-checklist-2026-06-06.md)
+
 ## Contract Authority
 
 - Forge OpenAPI policy: [docs/coordination/forge-openapi-contract-policy.md](forge-openapi-contract-policy.md)
