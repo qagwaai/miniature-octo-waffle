@@ -6,6 +6,7 @@ Feature: SW-15 Minimal Character Bust Builder v0
 Primary plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
 Sequence guide: ./sw-15-nova-forge-implementation-sequence.md
 M0 kickoff checklist: ./sw-15-m0-forge-kickoff-checklist.md
+M1 Forge kickoff prompt: ./sw-15-m1-forge-kickoff-prompt.md
 
 ## Purpose
 

@@ -7,6 +7,7 @@ Primary implementation plan: ../planning/sw-15/sw-15-minimal-character-bust-buil
 Coordination runbook: ./sw-15-orion-coordination-runbook.md
 Contract authority: ./forge-openapi-contract-policy.md
 M0 kickoff checklist: ./sw-15-m0-forge-kickoff-checklist.md
+M1 Forge kickoff prompt: ./sw-15-m1-forge-kickoff-prompt.md
 
 ## Purpose
 
