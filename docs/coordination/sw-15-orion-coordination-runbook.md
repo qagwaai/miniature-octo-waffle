@@ -1,6 +1,6 @@
 # SW-15 Orion Coordination Runbook
 
-Status: Active
+Status: Active — M0 Forge deliverables complete, awaiting Nova M0-V acknowledgment
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
@@ -59,7 +59,10 @@ Orion gate check:
 - Confirms Forge-first contract and persistence lock is complete before Nova implementation branch is marked execution-ready.
 
 Exit evidence:
-- Canonical pass fixture logs and intentional mismatch hard-fail logs.
+- Canonical pass fixture: `test/fixtures/sw15/character-bust-canonical-pass.json` — 16/16 tests pass ([PR #2](https://github.com/qagwaai/solid-train/pull/2))
+- Mismatch hard-fail: `test/fixtures/sw15/character-bust-mismatch-fail.json` — `faceShape: "triangle"` hard-fails with correct `rejectedValue`
+- Seed replay: `test/fixtures/sw15/npc-bust-seed-replay.json` — deterministic seed → descriptor mapping verified
+- Nova M0-V fixture compatibility acknowledgment: **Pending**
 
 ### M1 - Persistence Lifecycle
 
@@ -182,7 +185,7 @@ Exit evidence:
 
 | Role | Name | Date | Decision | Notes |
 | --- | --- | --- | --- | --- |
-| Orion | TBD | YYYY-MM-DD | Pending | |
-| Forge lead | TBD | YYYY-MM-DD | Pending | |
-| Nova lead | TBD | YYYY-MM-DD | Pending | |
+| Orion | Orion | YYYY-MM-DD | Pending | Awaiting Nova M0-V acknowledgment before Orion M0 gate sign |
+| Forge lead | Forge | 2026-06-05 | Approved | M0 deliverables complete — [solid-train PR #2](https://github.com/qagwaai/solid-train/pull/2); 16/16 contract hardening tests pass |
+| Nova lead | TBD | YYYY-MM-DD | Pending | M0-V fixture compatibility verification required |
 | QA lead | TBD | YYYY-MM-DD | Pending | |
