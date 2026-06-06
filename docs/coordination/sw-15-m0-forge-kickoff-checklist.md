@@ -89,8 +89,8 @@ Nova implementation starts only after Forge M0 contract plus persistence lock ev
 | M0-07 | Forge | Canonical pass fixture package published | Fixture paths and test output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/character-bust-canonical-pass.json; 16/16 tests pass |
 | M0-08 | Forge | Intentional mismatch fixture package published and hard-fail verified | Fixture paths and failing output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/character-bust-mismatch-fail.json; faceShape: "triangle" hard-fails with correct rejectedValue |
 | M0-09 | Forge | Seed replay fixture published for deterministic NPC baseline | Fixture path and replay output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/npc-bust-seed-replay.json; seed faction:trade\|role:merchant\|id:001 → stable descriptor verified |
-| M0-10 | Nova | Fixture compatibility verification completed | Adapter verification note and test output | Pending | TBD | Blocked on Nova M0-V acknowledgment in sw-15-m0-nova-handoff.md |
-| M0-11 | Orion | M0 evidence package reviewed and accepted | Gate note with all evidence links | Pending | TBD | Blocked on M0-10 Nova acknowledgment |
+| M0-10 | Nova | Fixture compatibility verification completed | Adapter verification note and test output | Done | [Nova PR #2](https://github.com/qagwaai/laughing-octo-journey/pull/2) | Verification note: docs/planning/sw-15/sw-15-m0v-verification-note.md — canonical pass: PASS, mismatch: REJECTED, seed replay: COMPATIBLE, drift scan: no drift found |
+| M0-11 | Orion | M0 evidence package reviewed and accepted | Gate note with all evidence links | Pending | TBD | Blocked on Orion M0 gate sign-off |
 
 ## M0 Exit Gate
 
