@@ -90,7 +90,21 @@ Nova implementation starts only after Forge M0 contract plus persistence lock ev
 | M0-08 | Forge | Intentional mismatch fixture package published and hard-fail verified | Fixture paths and failing output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/character-bust-mismatch-fail.json; faceShape: "triangle" hard-fails with correct rejectedValue |
 | M0-09 | Forge | Seed replay fixture published for deterministic NPC baseline | Fixture path and replay output | Done | [PR #2](https://github.com/qagwaai/solid-train/pull/2) | test/fixtures/sw15/npc-bust-seed-replay.json; seed faction:trade\|role:merchant\|id:001 → stable descriptor verified |
 | M0-10 | Nova | Fixture compatibility verification completed | Adapter verification note and test output | Done | [Nova PR #2](https://github.com/qagwaai/laughing-octo-journey/pull/2) | Verification note: docs/planning/sw-15/sw-15-m0v-verification-note.md — canonical pass: PASS, mismatch: REJECTED, seed replay: COMPATIBLE, drift scan: no drift found |
-| M0-11 | Orion | M0 evidence package reviewed and accepted | Gate note with all evidence links | Pending | TBD | Blocked on Orion M0 gate sign-off |
+| M0-11 | Orion | M0 evidence package reviewed and accepted | Gate note with all evidence links | Done | [Orion M0 Gate Note](#orion-m0-gate-note-2026-06-05) | M0-J signed after Forge PR #2 + Nova PR #2 evidence review |
+
+## Orion M0 Gate Note (2026-06-05)
+
+Decision: Approved, M0 closed.
+
+Evidence reviewed:
+1. Forge contract and fixture package complete: [solid-train PR #2](https://github.com/qagwaai/solid-train/pull/2)
+2. Nova M0-V fixture compatibility complete: [laughing-octo-journey PR #2](https://github.com/qagwaai/laughing-octo-journey/pull/2)
+3. Nova verification note: [docs/planning/sw-15/sw-15-m0v-verification-note.md](../planning/sw-15/sw-15-m0v-verification-note.md)
+
+Gate result:
+1. M0-01 through M0-11 complete.
+2. No unresolved contract drift findings reported in M0 evidence package.
+3. Ready-for-Nova handoff note recorded. M1 execution is authorized.
 
 ## M0 Exit Gate
 

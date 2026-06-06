@@ -1,6 +1,6 @@
 # SW-15 Orion Coordination Runbook
 
-Status: Active — M0 Forge deliverables complete, awaiting Nova M0-V acknowledgment
+Status: Active — M0 closed (Orion M0-J signed), M1 execution authorized
 Date: 2026-06-05
 Feature: SW-15 Minimal Character Bust Builder v0
 Primary plan: ../planning/sw-15/sw-15-minimal-character-bust-builder-implementation-plan.md
@@ -62,7 +62,8 @@ Exit evidence:
 - Canonical pass fixture: `test/fixtures/sw15/character-bust-canonical-pass.json` — 16/16 tests pass ([PR #2](https://github.com/qagwaai/solid-train/pull/2))
 - Mismatch hard-fail: `test/fixtures/sw15/character-bust-mismatch-fail.json` — `faceShape: "triangle"` hard-fails with correct `rejectedValue`
 - Seed replay: `test/fixtures/sw15/npc-bust-seed-replay.json` — deterministic seed → descriptor mapping verified
-- Nova M0-V fixture compatibility acknowledgment: **Pending**
+- Nova M0-V fixture compatibility acknowledgment: Completed ([Nova PR #2](https://github.com/qagwaai/laughing-octo-journey/pull/2))
+- Orion M0 gate note recorded: [SW-15 M0 Forge Kickoff Checklist](sw-15-m0-forge-kickoff-checklist.md#orion-m0-gate-note-2026-06-05)
 
 ### M1 - Persistence Lifecycle
 
@@ -185,7 +186,7 @@ Exit evidence:
 
 | Role | Name | Date | Decision | Notes |
 | --- | --- | --- | --- | --- |
-| Orion | Orion | YYYY-MM-DD | Pending | Awaiting Nova M0-V acknowledgment before Orion M0 gate sign |
+| Orion | Orion | 2026-06-05 | Approved | M0-J signed; evidence accepted in kickoff checklist gate note |
 | Forge lead | Forge | 2026-06-05 | Approved | M0 deliverables complete — [solid-train PR #2](https://github.com/qagwaai/solid-train/pull/2); 16/16 contract hardening tests pass |
-| Nova lead | TBD | YYYY-MM-DD | Pending | M0-V fixture compatibility verification required |
+| Nova lead | Nova | 2026-06-05 | Approved | M0-V fixture compatibility complete — [laughing-octo-journey PR #2](https://github.com/qagwaai/laughing-octo-journey/pull/2) |
 | QA lead | TBD | YYYY-MM-DD | Pending | |

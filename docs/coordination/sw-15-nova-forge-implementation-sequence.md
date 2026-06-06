@@ -35,6 +35,12 @@ Define the execution choreography between Forge and Nova for SW-15 so both teams
 
 ### M0 - Descriptor and Persistence Baseline Lock
 
+Status update (2026-06-05):
+1. Closed.
+2. Orion M0-J baseline lock signed.
+3. M1 execution authorized.
+4. Evidence chain: [solid-train PR #2](https://github.com/qagwaai/solid-train/pull/2), [laughing-octo-journey PR #2](https://github.com/qagwaai/laughing-octo-journey/pull/2), and [SW-15 M0 gate note](sw-15-m0-forge-kickoff-checklist.md#orion-m0-gate-note-2026-06-05).
+
 Sequence:
 1. Forge M0-A: Publish SW-15 schema components and enum domains in openapi.yaml.
 2. Forge M0-B: Publish persistence model shape for playable-character and NPC bust records.
